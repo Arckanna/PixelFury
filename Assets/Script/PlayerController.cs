@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         movePlayer(movementInput);
         Pointer();
 
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
