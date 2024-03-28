@@ -457,6 +457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  pointer: {fileID: 410479504}
+  projectilePrefab: {fileID: 3721523818466663760, guid: 0de6effdf519935449b9e145d6b8b792, type: 3}
 --- !u!212 &1323972112
 SpriteRenderer:
   m_ObjectHideFlags: 0
