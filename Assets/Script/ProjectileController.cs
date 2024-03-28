@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float damage;
     private Vector3 direction;
     // Start is called before the first frame update
    public void SetDirection(Vector3 direction)
@@ -27,7 +28,7 @@ public class ProjectileController : MonoBehaviour
     {
         if(collision.CompareTag("Enemy"))
         {
-            Destroy(collision.gameObject);
+           collision.GetComponent<EnemyController>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }
