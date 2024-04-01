@@ -25,10 +25,6 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * spawnRadius;
-        randomDirection += spawnPosition.position;
-        UnityEngine.AI.NavMeshHit hit;
-        UnityEngine.AI.NavMesh.SamplePosition(randomDirection, out hit, spawnRadius, 1);
-        Instantiate(enemyController, hit.position, Quaternion.identity);
+        Instantiate(enemyController, spawnPosition.position + Random.insideUnitSphere * spawnRadius, Quaternion.identity);
     }
 }
